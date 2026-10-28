@@ -1,22 +1,29 @@
-# Darvisha Technologies website
+# Darvisha Technologies — DevOps DeepDive website
 
-Static website package: `index.html`, `styles.css`, and `script.js`.
+## Package contents
+- `index.html` — website HTML with Darvisha Technologies branding
+- `styles.css` — website styles
+- `script.js` — navigation and page interactions
+- `images/darvisha-mark.png` — supplied blue cloud D logo, used in the header beside the company name
+- `images/darvisha-technologies-logo.png` — supplied full Darvisha Technologies logo, used in the footer
 
-## Deploy to Ubuntu EC2 with Nginx
+The two logo image files are copied from the images supplied by the site owner; they have not been redesigned.
 
-Copy these three files into your website directory (example: `/var/www/devopsdeepdive/`). Then run:
+## Deploy to the existing Ubuntu/Nginx website
+Back up the live website first, then copy the contents of this package into `/var/www/devopsdeepdive/`, preserving the `images/` directory.
+
+Example, if the extracted package folder is in `/home/ubuntu/darvisha-website-package`:
 
 ```bash
+sudo cp -a /var/www/devopsdeepdive /var/www/devopsdeepdive-backup-$(date +%Y%m%d-%H%M%S)
+sudo cp /home/ubuntu/darvisha-website-package/index.html /var/www/devopsdeepdive/index.html
+sudo cp /home/ubuntu/darvisha-website-package/styles.css /var/www/devopsdeepdive/styles.css
+sudo cp /home/ubuntu/darvisha-website-package/script.js /var/www/devopsdeepdive/script.js
+sudo mkdir -p /var/www/devopsdeepdive/images
+sudo cp /home/ubuntu/darvisha-website-package/images/* /var/www/devopsdeepdive/images/
 sudo chown -R www-data:www-data /var/www/devopsdeepdive
 sudo find /var/www/devopsdeepdive -type d -exec chmod 755 {} \;
 sudo find /var/www/devopsdeepdive -type f -exec chmod 644 {} \;
 ```
 
-No Nginx restart is normally required for static HTML/CSS/JS changes. Refresh the browser with `Ctrl+F5`.
-
-## Before publishing
-
-- Confirm `info@darvishatech.com` is the correct company email.
-- Replace the sample phone number `+91 98765 43210` and WhatsApp URL if needed.
-- Replace social links currently set to `#` with the company's real Telegram, YouTube, LinkedIn and GitHub URLs.
-- The registration form is an embedded Google Form. Keep the current form URL if it is the correct form.
+Then refresh the site with `Ctrl+F5`. This package does not change the live site until you deploy it.

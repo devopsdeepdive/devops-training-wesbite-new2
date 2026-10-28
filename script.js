@@ -25,26 +25,3 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 
 document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("enquiryForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const form = event.currentTarget;
-  const data = new FormData(form);
-  const subject = encodeURIComponent("DevOps + AWS Course Enquiry");
-  const body = encodeURIComponent(
-`Name: ${data.get("name")}
-Email: ${data.get("email")}
-Phone: ${data.get("phone")}
-Experience: ${data.get("experience")}
-
-Message:
-${data.get("message") || "No message provided."}`
-  );
-
-  const email = "info@devopsdeepdive.com";
-  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-
-  document.getElementById("formStatus").textContent =
-    "Opening your email client with the enquiry details...";
-});

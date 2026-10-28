@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Darvisha Technologies - hands-on DevOps, AWS Cloud, Azure DevOps and modern cloud training.">
-  <title>Darvisha Technologies | DevOps & Cloud Training</title>
+  <meta name="description" content="Darvisha Technologies - DevOps and AWS Cloud hands-on training, real-world projects, interview preparation and career guidance.">
+  <title>Darvisha Technologies | DevOps DeepDive Training</title>
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* Darvisha Technologies branding and visual refresh */
-    :root { --dt-navy: #0b2b52; --dt-blue: #0878ff; --dt-light: #eef7ff; --dt-cyan: #16c5e8; }
-    body { color: #102b50; }
-    .topbar { background: var(--dt-navy); }
-    .header { background: #fff; box-shadow: 0 3px 18px rgba(11,43,82,.07); }
-    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-    .brand-mark { position: relative; width: 48px; height: 42px; flex: 0 0 48px; border-radius: 13px; background: linear-gradient(135deg,#12d1e8,#0878ff 65%,#1652bc); clip-path: polygon(0 0,65% 0,100% 42%,100% 72%,68% 100%,0 100%); }
-    .brand-mark::before { content: ''; position: absolute; width: 22px; height: 22px; border: 5px solid #fff; border-left-color: transparent; border-radius: 50%; left: 8px; top: 6px; }
-    .brand-mark::after { content: ''; position: absolute; width: 22px; height: 13px; border-radius: 10px 10px 7px 7px; background: #24c8ef; right: -2px; bottom: 1px; }
-    .brand strong { color: var(--dt-navy); font-size: 1.55rem; line-height: 1.05; }
-    .brand small { color: #0878ff; font-size: .9rem; display: block; letter-spacing: .02em; }
-    nav a.active, nav a:hover { color: var(--dt-blue); }
-    .btn-primary, .nav-register { background: linear-gradient(110deg,#0878ff,#0560e9); border-color: #0878ff; }
-    .hero { background: radial-gradient(ellipse at 80% 40%,#d6ebff 0%,#edf7ff 43%,#f8fcff 100%); }
-    .hero h1 em, .section-heading h2 strong { color: var(--dt-blue); }
-    .stats { background: #edf6ff; border-radius: 14px; }
-    .stats b { color: var(--dt-blue); }
-    .about-card, .tech, .project, .benefit, .price-card, .form-card { border-radius: 14px; }
-    .about-card, .tech { border: 1px solid #e1efff; box-shadow: 0 8px 22px rgba(15,71,130,.04); }
-    .section-heading > span, .eyebrow { color: var(--dt-blue); }
-    footer { background: var(--dt-navy); }
-    footer .brand strong, footer .brand small { color: #fff; }
-    footer .brand-mark { box-shadow: 0 0 0 1px rgba(255,255,255,.15); }
-    @media (max-width: 600px) { .brand strong { font-size: 1.2rem; } .brand-mark { width: 40px; height: 36px; flex-basis: 40px; } }
+    .darvisha-brand { gap: 12px; }
+    .darvisha-mark { width: 54px; height: 54px; object-fit: contain; flex: 0 0 auto; }
+    .darvisha-brand strong { display: block; }
+    .darvisha-brand small { display: block; }
+    .darvisha-footer-brand { display: flex; align-items: center; margin-bottom: 16px; }
+    .darvisha-footer-brand img { display: block; width: min(100%, 340px); height: auto; object-fit: contain; }
+    @media (max-width: 600px) {
+      .darvisha-mark { width: 42px; height: 42px; }
+      .darvisha-brand strong { font-size: 15px; }
+      .darvisha-brand small { font-size: 10px; }
+      .darvisha-footer-brand img { width: min(100%, 280px); }
+    }
+  </style>
+  <style>
     /* Registration section layout improvements */
     #register .register-grid {
       display: grid;
@@ -80,8 +70,8 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="top-contact">
-        <a href="mailto:info@darvishatech.com">✉ info@darvishatech.com</a>
-        <a href="tel:+919876543210">☎ +91 98765 43210</a>
+        <a href="mailto:info@devopsdeepdive.com">✉ info@devopsdeepdive.com</a>
+        <a href="tel:+919642219800">☎ +91 96422 19800</a>
       </div>
       <div class="social">
         <span>Follow Us</span>
@@ -95,11 +85,11 @@
 
   <header class="header">
     <div class="container nav-wrap">
-      <a class="brand" href="#home">
-        <div class="brand-mark"><span></span><span></span><span></span></div>
+      <a class="brand darvisha-brand" href="#home" aria-label="Darvisha Technologies - DevOps DeepDive">
+        <img class="darvisha-mark" src="images/darvisha-mark.png" alt="Darvisha Technologies logo">
         <div>
           <strong>Darvisha Technologies</strong>
-          <small>Learn. Build. Deploy. Succeed.</small>
+          <small>Learn. Build. Grow.</small>
         </div>
       </a>
 
@@ -109,7 +99,6 @@
         <a class="active" href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#course">Course</a>
-        
         <a href="#projects">Projects</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact Us</a>
@@ -165,9 +154,9 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-heading">
-          <span>ABOUT DARVISHA TECHNOLOGIES</span>
+          <span>ABOUT THE TRAINING</span>
           <h2>Learn DevOps the <strong>practical way</strong></h2>
-          <p>Darvisha Technologies provides industry-focused, hands-on training in DevOps, AWS Cloud, Azure DevOps and modern cloud technologies. Our goal is to help you build real-world skills, gain confidence and achieve your career goals.</p>
+          <p>Designed for beginners, working professionals and IT engineers who want to build strong DevOps and AWS Cloud skills through practical implementation.</p>
         </div>
 
         <div class="about-grid">
@@ -294,6 +283,8 @@
       </div>
     </section>
 
+    
+
     <section id="register" class="section register-section">
       <div class="container register-grid">
         <div>
@@ -301,8 +292,8 @@
           <h2>Ready to become a <strong>DevOps Engineer?</strong></h2>
           <p>Register for the next batch or send an enquiry. We'll contact you with batch timing, fee and registration details.</p>
           <div class="contact-mini">
-            <a href="mailto:info@darvishatech.com">✉ info@darvishatech.com</a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener">☏ WhatsApp: +91 98765 43210</a>
+            <a href="mailto:info@devopsdeepdive.com">✉ info@devopsdeepdive.com</a>
+            <a href="https://wa.me/919642219800" target="_blank" rel="noopener">☏ WhatsApp: +91 96422 19800</a>
           </div>
         </div>
 
@@ -317,7 +308,7 @@
             frameborder="0"
             marginheight="0"
             marginwidth="0"
-            title="Darvisha Technologies Course Enquiry and Registration">
+            title="DevOps DeepDive Course Enquiry and Registration">
             Loading…
           </iframe>
         </div>
@@ -345,27 +336,26 @@
           <p>Have questions about batches, fees or the curriculum? Get in touch.</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:info@darvishatech.com">✉ info@darvishatech.com</a>
-          <a href="tel:+919876543210">☎ +91 98765 43210</a>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener">☏ WhatsApp Us</a>
+          <a href="mailto:info@devopsdeepdive.com">✉ info@devopsdeepdive.com</a>
+          <a href="tel:+919642219800">☎ +91 96422 19800</a>
+          <a href="https://wa.me/919642219800" target="_blank" rel="noopener">☏ WhatsApp Us</a>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">☏</a>
+  <a class="whatsapp" href="https://wa.me/919642219800" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">☏</a>
 
   <footer>
     <div class="container footer-grid">
       <div>
-        <div class="brand footer-brand">
-          <div class="brand-mark"><span></span><span></span><span></span></div>
-          <div><strong>Darvisha Technologies</strong><small>Learn. Build. Deploy. Succeed.</small></div>
+        <div class="footer-brand darvisha-footer-brand">
+          <img src="images/darvisha-technologies-logo.png" alt="Darvisha Technologies — Learn, Build, Grow">
         </div>
-        <p>Learn. Build. Deploy. Succeed. Practical DevOps and cloud training for your career growth.</p>
+        <p>Practical DevOps and AWS Cloud training for the next generation of cloud engineers.</p>
       </div>
       <div><h4>Quick Links</h4><a href="#about">About</a><a href="#course">Course</a><a href="#projects">Projects</a></div>
-      <div><h4>Contact</h4><a href="mailto:info@darvishatech.com">Email</a><a href="tel:+919876543210">Phone</a><a href="https://wa.me/919876543210">WhatsApp</a></div>
+      <div><h4>Contact</h4><a href="mailto:info@devopsdeepdive.com">Email</a><a href="tel:+919642219800">Phone</a><a href="https://wa.me/919642219800">WhatsApp</a></div>
     </div>
     <div class="copyright">© <span id="year"></span> Darvisha Technologies. All rights reserved.</div>
   </footer>

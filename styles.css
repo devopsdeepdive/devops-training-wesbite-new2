@@ -18,48 +18,10 @@ footer{background:#020d20;color:#b9c9dc;padding:55px 0 0}.footer-grid{display:gr
 @media(max-width:780px){.top-contact a:nth-child(2),.social span,.social a:nth-child(n+3){display:none}.menu-btn{display:block}nav{display:none;position:absolute;left:0;right:0;top:120px;background:#03142f;flex-direction:column;align-items:stretch;padding:15px 6%;gap:0;border-top:1px solid #17304e}nav.open{display:flex}nav a{padding:13px 0}nav a.active:after{display:none}.nav-register{text-align:center;margin-top:8px}.hero-grid{grid-template-columns:1fr;min-height:auto;padding-top:65px;padding-bottom:40px}.hero-art{height:330px;order:-1}.hero-copy{text-align:center}.hero p{margin:0 auto}.hero-actions{justify-content:center}.hero-points{justify-content:center}.hero-points span{margin:5px 0}.stats{grid-template-columns:1fr 1fr}.stats>div:nth-child(2n){border-right:0}.about-grid,.curriculum,.project-grid,.benefit-grid,.register-grid{grid-template-columns:1fr}.register-grid{gap:35px}.price-grid{grid-template-columns:1fr}.contact-inner{flex-direction:column;align-items:flex-start}.contact-links{text-align:left}.footer-grid{grid-template-columns:1fr 1fr}.section{padding:65px 0}}
 @media(max-width:500px){.topbar-inner{justify-content:center}.brand strong{font-size:17px}.hero h1{font-size:43px}.hero h2{font-size:18px}.hero-actions{flex-direction:column}.hero-art{transform:scale(.78);margin:-30px 0}.stats{grid-template-columns:1fr}.stats>div{border-right:0}.tech-grid{grid-template-columns:repeat(2,1fr)}.section-heading h2{font-size:29px}.register-grid h2{font-size:34px}.footer-grid{grid-template-columns:1fr}.whatsapp{right:15px;bottom:15px}}
 
-/* ==========================================================
-   DARVISHA TECHNOLOGIES — brand refresh
-   Keep this block at the end so it overrides the base styles.
-   ========================================================== */
-:root {
-  --dt-navy: #0b2b52;
-  --dt-blue: #0878ff;
-  --dt-cyan: #16c5e8;
-  --dt-pale: #eef7ff;
-  --dt-purple: #7048ed;
-  --dt-text: #102b50;
-}
-html { scroll-behavior: smooth; }
-body { color: var(--dt-text); }
-.topbar { background: var(--dt-navy); color: #fff; }
-.topbar a, .topbar span { color: #fff; }
-.header { background: rgba(255,255,255,.97); box-shadow: 0 3px 18px rgba(11,43,82,.08); }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand-mark { background: linear-gradient(135deg,var(--dt-cyan),var(--dt-blue) 65%,#1652bc); }
-.brand strong { color: var(--dt-navy); }
-.brand small { color: var(--dt-blue); }
-nav a.active, nav a:hover { color: var(--dt-blue); }
-.btn-primary, .nav-register { background: linear-gradient(110deg,var(--dt-blue),#0560e9); border-color: var(--dt-blue); }
-.btn-primary:hover, .nav-register:hover { filter: brightness(.96); box-shadow: 0 8px 20px rgba(8,120,255,.2); }
-.hero { background: radial-gradient(ellipse at 82% 42%,#d6ebff 0%,#edf7ff 43%,#f8fcff 100%); }
-.hero h1 { color: var(--dt-navy); }
-.hero h1 em, .section-heading strong, .about-copy strong { color: var(--dt-blue); }
-.eyebrow { color: var(--dt-blue); }
-.section.light, .tech-section { background: #f0f8ff; }
-.benefit, .tech, .project, .price-card, .form-card, .faq details { border-color: #dcecff; box-shadow: 0 8px 26px rgba(11,43,82,.045); }
-.tech-logo { color: var(--dt-blue); }
-.contact-section, footer { background: var(--dt-navy); color: #fff; }
-.contact-section h2, footer h4, .footer-brand strong { color: #fff; }
-.contact-section a, footer a, footer p, .footer-brand small { color: #e7f2ff; }
-footer a:hover, .contact-section a:hover { color: #65d9ff; }
-.whatsapp { background: #0aa56b; }
-#register { background: linear-gradient(135deg,#eef7ff,#e0f1ff); }
-#register .google-form-card { background: #fff; }
-::selection { background: #b9dcff; color: var(--dt-navy); }
-@media (max-width: 760px) {
-  .topbar .topbar-inner { gap: 8px; }
-  .top-contact { flex-wrap: wrap; }
-  .brand strong { font-size: 1.25rem; }
-  .hero { background: linear-gradient(180deg,#edf7ff,#fff); }
-}
+.tally-card{padding:28px}
+.tally-header h3{margin:0 0 5px}
+.tally-header p{margin:0 0 15px;color:var(--muted);font-size:13px}
+.tally-iframe{width:100%;height:720px;border:0;background:transparent;display:block}
+.tally-setup-notice{margin-top:10px;padding:10px 12px;border-radius:7px;background:#fff7e8;color:#7a4b00;font-size:11px}
+.tally-setup-notice code{background:#fff0cf;padding:2px 4px;border-radius:3px}
+@media(max-width:500px){.tally-card{padding:18px}.tally-iframe{height:760px}}
